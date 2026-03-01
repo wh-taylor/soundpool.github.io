@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { AudioPlayer } from './AudioPlayer';
 import { FONT_OPTIONS } from '../data/fonts';
@@ -13,10 +14,13 @@ interface BandRowProps {
 export function BandRow({ band }: BandRowProps) {
   const { getUserById } = useAuth();
 
+  const [isHovered, setIsHovered] = useState(false);
+
   const accentColor = band.customization?.accentColor ?? 'var(--accent-2)';
   const fontFamily = band.customization?.fontFamily;
   const fontStack = FONT_OPTIONS.find((f) => f.value === fontFamily)?.stack ?? 'inherit';
-
+  const staticImage = band.imageUrl; 
+  const animatedGif = band.gifUrl; // You'll need to add this to your mock data
   const audioSrc = band.audioData ?? band.audioUrl;
 
   const customStyle = {
@@ -26,15 +30,24 @@ export function BandRow({ band }: BandRowProps) {
   } as React.CSSProperties;
 
   return (
-    <div className="band-row panel" style={customStyle}>
-      <div className="band-row__main">
-        {band.imageUrl ? (
-          <img src={band.imageUrl} alt={band.name} className="band-row__image" />
-        ) : (
-          <div className="band-row__image-placeholder">
-            <span>♪</span>
-          </div>
-        )}
+  <div 
+    className="band-row panel" 
+    style={customStyle}
+    onMouseEnter={() => setIsHovered(true)}
+    onMouseLeave={() => setIsHovered(false)}
+  >
+    <div className="band-row__main">
+      {band.imageUrl ? (
+        <img 
+          src={isHovered && animatedGif ? animatedGif : staticImage} 
+          alt={band.name} 
+          className="band-row__image" 
+        />
+      ) : (
+        <div className="band-row__image-placeholder">
+          <span>♪</span>
+        </div>
+      )}
 
         <div className="band-row__info">
           <div className="band-row__name-row">

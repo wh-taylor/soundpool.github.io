@@ -19,6 +19,7 @@ export function FeedPostCard({ post, onDelete, onAddComment }: FeedPostCardProps
   const embedUrl = post.videoUrl ? getEmbedUrl(post.videoUrl) : null;
 
   return (
+    /* The .feed-post-card class here triggers the CSS transition and hover */
     <article className="feed-post-card panel">
       <div className="feed-post-card__header">
         <span className="tag tag--post">Post</span>

@@ -1,13 +1,23 @@
 .band-row {
   padding: 0;
   overflow: hidden;
-  transition: border-color var(--transition);
+  transition: border-color var(--transition), transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* New Hover State */
+.band-row:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  position: relative; /* Ensures z-index is respected */
+  border-color: var(--band-accent); /* Optional: uses the band's custom color on hover */
 }
 
 .band-row__main {
   display: flex;
   gap: 0;
 }
+
 
 .band-row__image {
   width: 180px;
