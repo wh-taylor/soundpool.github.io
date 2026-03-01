@@ -9,10 +9,6 @@ import { getArtistSimilarities, getGenreSimilarities, getSimilarity } from '../u
 
 export function JamsPage() {
   const { users, currentUser } = useAuth();
-  const genreSimilarity = getGenreSimilarities(users);
-  const artistSimilarity = getArtistSimilarities(users);
-  const visibleUsers = users.filter((u) => u.jamEntry?.visible)
-    .sort((u1, u2) => getSimilarity(currentUser!, u2, genreSimilarity, artistSimilarity) - getSimilarity(currentUser!, u1, genreSimilarity, artistSimilarity));
   const currentUserVisible = currentUser?.jamEntry?.visible;
   const [locationFilter, setLocationFilter] = useState(currentUser?.location ?? '');
   const [genreFilters, setGenreFilters] = useState<string[]>([]);
@@ -23,6 +19,10 @@ export function JamsPage() {
     );
   }
 
+  const genreSimilarity = useMemo(() => getGenreSimilarities(users), [users]);
+  const artistSimilarity = useMemo(() => getArtistSimilarities(users), [users]);
+  const allArtists = useMemo(() => [...new Set(users.flatMap(u => u.favoriteArtists))], [users]);
+
   const filtered = useMemo(() => {
     let list = users.filter((u) => u.jamEntry?.visible);
     if (locationFilter) list = list.filter((u) => u.location === locationFilter);
@@ -31,9 +31,17 @@ export function JamsPage() {
         genreFilters.some((g) => u.favoriteGenres.includes(g))
       );
     }
+    if (currentUser) {
+      list = list.sort((u1, u2) =>
+        getSimilarity(currentUser, u2, genreSimilarity, artistSimilarity, allArtists) -
+        getSimilarity(currentUser, u1, genreSimilarity, artistSimilarity, allArtists)
+      );
+    }
     return list;
-  }, [users, locationFilter, genreFilters]);
-  console.log(visibleUsers.map((u) => getSimilarity(currentUser!, u, genreSimilarity, artistSimilarity)));
+  }, [users, locationFilter, genreFilters, currentUser, genreSimilarity, artistSimilarity, allArtists]);
+  console.log(filtered.map((u) => getSimilarity(currentUser!, u, genreSimilarity, artistSimilarity, allArtists)));
+  console.log(genreSimilarity);
+  console.log(artistSimilarity);
 
   return (
     <div className="page">
