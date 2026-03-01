@@ -5,29 +5,12 @@ import { JamCard } from '../components/JamCard';
 import { CITIES } from '../data/cities';
 import { GENRES } from '../data/genres';
 import './JamsPage.css';
+import { getArtistSimilarities, getGenreSimilarities, getSimilarity } from '../utils/similarity';
 
 export function JamsPage() {
   const { users, currentUser } = useAuth();
+  const visibleUsers = users.filter((u) => u.jamEntry?.visible);
   const currentUserVisible = currentUser?.jamEntry?.visible;
-  const [locationFilter, setLocationFilter] = useState(currentUser?.location ?? '');
-  const [genreFilters, setGenreFilters] = useState<string[]>([]);
-
-  function toggleGenre(g: string) {
-    setGenreFilters((prev) =>
-      prev.includes(g) ? prev.filter((x) => x !== g) : [...prev, g]
-    );
-  }
-
-  const filtered = useMemo(() => {
-    let list = users.filter((u) => u.jamEntry?.visible);
-    if (locationFilter) list = list.filter((u) => u.location === locationFilter);
-    if (genreFilters.length > 0) {
-      list = list.filter((u) =>
-        genreFilters.some((g) => u.favoriteGenres.includes(g))
-      );
-    }
-    return list;
-  }, [users, locationFilter, genreFilters]);
 
   return (
     <div className="page">
