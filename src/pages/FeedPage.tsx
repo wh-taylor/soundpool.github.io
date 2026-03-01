@@ -1,11 +1,11 @@
 import { useMemo, useState } from 'react';
 import { useApp } from '../context/AppContext';
+import { useAuth } from '../context/AuthContext';
 import { FeedPostCard } from '../components/FeedPostCard';
-import { JamCard } from '../components/JamCard';
 import { BandRow } from '../components/BandRow';
 import { ShowCard } from '../components/ShowCard';
 import { CreatePostModal } from '../components/CreatePostModal';
-import type { UnifiedFeedItem } from '../types';
+import type { UnifiedFeedItem, Comment } from '../types';
 import './FeedPage.css';
 
 function assertNever(x: never): never {
@@ -13,18 +13,31 @@ function assertNever(x: never): never {
 }
 
 export function FeedPage() {
-  const { feedPosts, jamPosts, bands, shows } = useApp();
+  const { feedPosts, bands, shows, deleteFeedPost, addCommentToFeedPost } = useApp();
+  const { currentUser } = useAuth();
   const [postModalOpen, setPostModalOpen] = useState(false);
 
   const feed = useMemo((): UnifiedFeedItem[] => {
     const items: UnifiedFeedItem[] = [
       ...feedPosts.map((p) => ({ type: 'post' as const, createdAt: p.createdAt, data: p })),
-      ...jamPosts.map((j) => ({ type: 'jam' as const, createdAt: j.createdAt, data: j })),
       ...bands.map((b) => ({ type: 'band' as const, createdAt: b.createdAt, data: b })),
       ...shows.map((s) => ({ type: 'show' as const, createdAt: s.createdAt, data: s })),
     ];
     return items.sort((a, b) => b.createdAt.localeCompare(a.createdAt));
-  }, [feedPosts, jamPosts, bands, shows]);
+  }, [feedPosts, bands, shows]);
+
+  function makeAddComment(postId: string) {
+    return (content: string) => {
+      if (!currentUser) return;
+      const comment: Comment = {
+        id: crypto.randomUUID(),
+        authorId: currentUser.id,
+        content,
+        createdAt: new Date().toISOString(),
+      };
+      addCommentToFeedPost(postId, comment);
+    };
+  }
 
   return (
     <div className="page">
@@ -42,12 +55,13 @@ export function FeedPage() {
           {feed.map((item) => {
             switch (item.type) {
               case 'post':
-                return <FeedPostCard key={item.data.id} post={item.data} />;
-              case 'jam':
                 return (
-                  <div key={item.data.id} className="feed-page__jam-wrapper">
-                    <JamCard jam={item.data} />
-                  </div>
+                  <FeedPostCard
+                    key={item.data.id}
+                    post={item.data}
+                    onDelete={currentUser?.id === item.data.authorId ? () => deleteFeedPost(item.data.id) : undefined}
+                    onAddComment={makeAddComment(item.data.id)}
+                  />
                 );
               case 'band':
                 return <BandRow key={item.data.id} band={item.data} />;

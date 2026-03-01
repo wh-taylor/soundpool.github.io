@@ -10,8 +10,9 @@ interface AuthContextValue {
   users: User[];
   login: (email: string, password: string) => boolean;
   logout: () => void;
-  signup: (userData: Omit<User, 'id' | 'joinDate' | 'lastActive' | 'profileComments'>) => boolean;
+  signup: (userData: Omit<User, 'id' | 'joinDate' | 'lastActive'>) => boolean;
   updateUser: (patch: Partial<User>) => void;
+  updateUserById: (id: string, patch: Partial<User>) => void;
   getUserById: (id: string) => User | undefined;
   getUserByUsername: (username: string) => User | undefined;
 }
@@ -35,7 +36,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         (u) => u.email.toLowerCase() === email.toLowerCase() && u.password === password
       );
       if (!user) return false;
-      // Update lastActive
       setUsers((prev) =>
         prev.map((u) =>
           u.id === user.id ? { ...u, lastActive: new Date().toISOString() } : u
@@ -52,7 +52,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, [setCurrentUserId]);
 
   const signup = useCallback(
-    (userData: Omit<User, 'id' | 'joinDate' | 'lastActive' | 'profileComments'>): boolean => {
+    (userData: Omit<User, 'id' | 'joinDate' | 'lastActive'>): boolean => {
       const exists = users.some(
         (u) =>
           u.email.toLowerCase() === userData.email.toLowerCase() ||
@@ -65,7 +65,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         id: crypto.randomUUID(),
         joinDate: new Date().toISOString(),
         lastActive: new Date().toISOString(),
-        profileComments: [],
       };
       setUsers((prev) => [...prev, newUser]);
       setCurrentUserId(newUser.id);
@@ -88,6 +87,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     [currentUserId, setUsers]
   );
 
+  const updateUserById = useCallback(
+    (id: string, patch: Partial<User>) => {
+      setUsers((prev) =>
+        prev.map((u) => (u.id === id ? { ...u, ...patch } : u))
+      );
+    },
+    [setUsers]
+  );
+
   const getUserById = useCallback(
     (id: string) => users.find((u) => u.id === id),
     [users]
@@ -108,6 +116,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         logout,
         signup,
         updateUser,
+        updateUserById,
         getUserById,
         getUserByUsername,
       }}

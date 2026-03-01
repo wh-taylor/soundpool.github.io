@@ -2,7 +2,6 @@ import { createContext, useContext, useEffect, useCallback } from 'react';
 import type { ReactNode } from 'react';
 import type {
   FeedPost,
-  JamPost,
   Band,
   Show,
   VenuePost,
@@ -14,7 +13,6 @@ import { useLocalStorage } from '../hooks/useLocalStorage';
 import { STORAGE_KEYS } from '../data/storageKeys';
 import {
   MOCK_FEED_POSTS,
-  MOCK_JAM_POSTS,
   MOCK_BANDS,
   MOCK_SHOWS,
   MOCK_VENUE_POSTS,
@@ -24,7 +22,6 @@ import {
 
 interface AppContextValue {
   feedPosts: FeedPost[];
-  jamPosts: JamPost[];
   bands: Band[];
   shows: Show[];
   venuePosts: VenuePost[];
@@ -32,10 +29,13 @@ interface AppContextValue {
   artistPosts: ArtistPost[];
 
   addFeedPost: (post: FeedPost) => void;
-  addJamPost: (jam: JamPost) => void;
+  deleteFeedPost: (id: string) => void;
+  addCommentToFeedPost: (postId: string, comment: Comment) => void;
   addBand: (band: Band) => void;
   updateBand: (id: string, patch: Partial<Band>) => void;
+  deleteBand: (id: string) => void;
   addShow: (show: Show) => void;
+  deleteShow: (id: string) => void;
   addCommentToShow: (showId: string, comment: Comment) => void;
   addVenuePost: (post: VenuePost) => void;
   addPhotographerPost: (post: PhotographerPost) => void;
@@ -50,7 +50,6 @@ const AppContext = createContext<AppContextValue | null>(null);
 
 export function AppProvider({ children }: { children: ReactNode }) {
   const [feedPosts, setFeedPosts] = useLocalStorage<FeedPost[]>(STORAGE_KEYS.FEED_POSTS, []);
-  const [jamPosts, setJamPosts] = useLocalStorage<JamPost[]>(STORAGE_KEYS.JAM_POSTS, []);
   const [bands, setBands] = useLocalStorage<Band[]>(STORAGE_KEYS.BANDS, []);
   const [shows, setShows] = useLocalStorage<Show[]>(STORAGE_KEYS.SHOWS, []);
   const [venuePosts, setVenuePosts] = useLocalStorage<VenuePost[]>(STORAGE_KEYS.VENUE_POSTS, []);
@@ -68,7 +67,6 @@ export function AppProvider({ children }: { children: ReactNode }) {
     const seeded = localStorage.getItem(STORAGE_KEYS.SEED_DONE);
     if (!seeded) {
       setFeedPosts(MOCK_FEED_POSTS);
-      setJamPosts(MOCK_JAM_POSTS);
       setBands(MOCK_BANDS);
       setShows(MOCK_SHOWS);
       setVenuePosts(MOCK_VENUE_POSTS);
@@ -84,9 +82,19 @@ export function AppProvider({ children }: { children: ReactNode }) {
     [setFeedPosts]
   );
 
-  const addJamPost = useCallback(
-    (jam: JamPost) => setJamPosts((prev) => [jam, ...prev]),
-    [setJamPosts]
+  const deleteFeedPost = useCallback(
+    (id: string) => setFeedPosts((prev) => prev.filter((p) => p.id !== id)),
+    [setFeedPosts]
+  );
+
+  const addCommentToFeedPost = useCallback(
+    (postId: string, comment: Comment) =>
+      setFeedPosts((prev) =>
+        prev.map((p) =>
+          p.id === postId ? { ...p, comments: [...p.comments, comment] } : p
+        )
+      ),
+    [setFeedPosts]
   );
 
   const addBand = useCallback(
@@ -100,8 +108,18 @@ export function AppProvider({ children }: { children: ReactNode }) {
     [setBands]
   );
 
+  const deleteBand = useCallback(
+    (id: string) => setBands((prev) => prev.filter((b) => b.id !== id)),
+    [setBands]
+  );
+
   const addShow = useCallback(
     (show: Show) => setShows((prev) => [show, ...prev]),
+    [setShows]
+  );
+
+  const deleteShow = useCallback(
+    (id: string) => setShows((prev) => prev.filter((s) => s.id !== id)),
     [setShows]
   );
 
@@ -187,17 +205,19 @@ export function AppProvider({ children }: { children: ReactNode }) {
     <AppContext.Provider
       value={{
         feedPosts,
-        jamPosts,
         bands,
         shows,
         venuePosts,
         photographerPosts,
         artistPosts,
         addFeedPost,
-        addJamPost,
+        deleteFeedPost,
+        addCommentToFeedPost,
         addBand,
         updateBand,
+        deleteBand,
         addShow,
+        deleteShow,
         addCommentToShow,
         addVenuePost,
         addPhotographerPost,

@@ -8,7 +8,7 @@ import './CommentSection.css';
 
 interface CommentSectionProps {
   comments: Comment[];
-  onAddComment: (content: string) => void;
+  onAddComment?: (content: string) => void;
 }
 
 export function CommentSection({ comments, onAddComment }: CommentSectionProps) {
@@ -18,7 +18,7 @@ export function CommentSection({ comments, onAddComment }: CommentSectionProps) 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     const trimmed = text.trim();
-    if (!trimmed || !currentUser) return;
+    if (!trimmed || !currentUser || !onAddComment) return;
     onAddComment(trimmed);
     setText('');
   }
@@ -27,7 +27,7 @@ export function CommentSection({ comments, onAddComment }: CommentSectionProps) 
     <div className="comment-section">
       <div className="section-label">Comments ({comments.length})</div>
 
-      {currentUser && (
+      {currentUser && onAddComment && (
         <form onSubmit={handleSubmit} className="comment-section__form">
           <UserAvatar user={currentUser} size="sm" />
           <input

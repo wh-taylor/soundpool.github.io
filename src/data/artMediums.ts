@@ -1,0 +1,17 @@
+export const ART_MEDIUMS: string[] = [
+  'Painting',
+  'Illustration',
+  'Digital Art',
+  'Photography',
+  'Graphic Design',
+  'Sculpture',
+  'Printmaking',
+  'Murals',
+  'Street Art',
+  'Textile Art',
+  'Collage',
+  'Animation',
+  'Video Art',
+  'Installation',
+  'Mixed Media',
+];

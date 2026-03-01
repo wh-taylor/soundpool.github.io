@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
 import { useAuth } from '../context/AuthContext';
 import { CommentSection } from '../components/CommentSection';
@@ -9,7 +9,8 @@ import './ShowDetailPage.css';
 
 export function ShowDetailPage() {
   const { id } = useParams<{ id: string }>();
-  const { shows, addCommentToShow } = useApp();
+  const { shows, addCommentToShow, deleteShow } = useApp();
+  const navigate = useNavigate();
   const { currentUser } = useAuth();
   const [copied, setCopied] = useState(false);
 
@@ -102,10 +103,20 @@ export function ShowDetailPage() {
               </div>
             </div>
 
-            <button className="btn btn--secondary show-detail__share-btn" onClick={handleShare}>
-              <span>🔗</span>
-              {copied ? 'Link copied!' : 'Share this event'}
-            </button>
+            <div className="show-detail__actions">
+              <button className="btn btn--secondary show-detail__share-btn" onClick={handleShare}>
+                <span>🔗</span>
+                {copied ? 'Link copied!' : 'Share this event'}
+              </button>
+              {currentUser?.id === show.authorId && (
+                <button
+                  className="btn btn--danger"
+                  onClick={() => { deleteShow(show.id); navigate('/shows'); }}
+                >
+                  Delete Show
+                </button>
+              )}
+            </div>
           </div>
         </div>
 

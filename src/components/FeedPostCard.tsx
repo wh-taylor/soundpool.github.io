@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { UserAvatar } from './UserAvatar';
+import { CommentSection } from './CommentSection';
 import { timeAgo } from '../utils/dateUtils';
 import { getEmbedUrl } from '../utils/videoUtils';
 import type { FeedPost } from '../types';
@@ -8,9 +9,11 @@ import './FeedPostCard.css';
 
 interface FeedPostCardProps {
   post: FeedPost;
+  onDelete?: () => void;
+  onAddComment?: (content: string) => void;
 }
 
-export function FeedPostCard({ post }: FeedPostCardProps) {
+export function FeedPostCard({ post, onDelete, onAddComment }: FeedPostCardProps) {
   const { getUserById } = useAuth();
   const author = getUserById(post.authorId);
   const embedUrl = post.videoUrl ? getEmbedUrl(post.videoUrl) : null;
@@ -32,6 +35,11 @@ export function FeedPostCard({ post }: FeedPostCardProps) {
           )}
           <span className="feed-post-card__time">{timeAgo(post.createdAt)}</span>
         </div>
+        {onDelete && (
+          <button className="btn btn--danger btn--sm" onClick={onDelete}>
+            Delete
+          </button>
+        )}
       </div>
 
       <p className="feed-post-card__content">{post.content}</p>
@@ -51,6 +59,8 @@ export function FeedPostCard({ post }: FeedPostCardProps) {
           />
         </div>
       )}
+
+      <CommentSection comments={post.comments} onAddComment={onAddComment} />
     </article>
   );
 }

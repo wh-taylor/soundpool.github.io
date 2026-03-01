@@ -4,9 +4,8 @@ import { useAuth } from '../context/AuthContext';
 import { useApp } from '../context/AppContext';
 import { UserAvatar } from '../components/UserAvatar';
 import { AudioPlayer } from '../components/AudioPlayer';
-import { CommentSection } from '../components/CommentSection';
 import { CustomizationPanel } from '../components/CustomizationPanel';
-import { JamCard } from '../components/JamCard';
+import { BandRow } from '../components/BandRow';
 import { FeedPostCard } from '../components/FeedPostCard';
 import { compressImage, fileToBase64 } from '../utils/imageUtils';
 import { CITIES } from '../data/cities';
@@ -22,16 +21,23 @@ const AUDIO_MAX_BYTES = 2 * 1024 * 1024;
 
 export function ProfilePage() {
   const { username } = useParams<{ username: string }>();
-  const { currentUser, getUserByUsername, updateUser } = useAuth();
-  const { feedPosts, jamPosts } = useApp();
+  const { currentUser, getUserByUsername, updateUser, updateUserById, getUserById } = useAuth();
+  const {
+    feedPosts,
+    bands,
+    deleteFeedPost,
+    addCommentToFeedPost,
+    inviteUserToBand,
+    acceptBandInvite,
+    declineBandInvite,
+  } = useApp();
 
   const profileUser = getUserByUsername(username ?? '');
   const isOwnProfile = currentUser?.id === profileUser?.id;
 
+  // Profile edit state
   const [editing, setEditing] = useState(false);
   const [error, setError] = useState('');
-
-  // Edit form state mirrors the user object
   const [editInstagram, setEditInstagram] = useState('');
   const [editSpotify, setEditSpotify] = useState('');
   const [editLocation, setEditLocation] = useState('');
@@ -43,6 +49,19 @@ export function ProfilePage() {
   const [editCustomization, setEditCustomization] = useState<Customization>({});
   const [editAvatar, setEditAvatar] = useState('');
   const [editBanner, setEditBanner] = useState('');
+
+  // Jam Entry edit state (own profile only)
+  const [jamVisible, setJamVisible] = useState(() => currentUser?.jamEntry?.visible ?? false);
+  const [jamDesc, setJamDesc] = useState(() => currentUser?.jamEntry?.description ?? '');
+  const [jamCustomization, setJamCustomization] = useState<Customization>(
+    () => currentUser?.jamEntry?.customization ?? {}
+  );
+  const [jamSaved, setJamSaved] = useState(false);
+
+  // Band management state
+  const [expandedBandId, setExpandedBandId] = useState<string | null>(null);
+  const [inviteUsername, setInviteUsername] = useState('');
+  const [inviteError, setInviteError] = useState('');
 
   if (!profileUser) {
     return (
@@ -66,8 +85,19 @@ export function ProfilePage() {
   } as React.CSSProperties;
 
   const userFeedPosts = feedPosts.filter((p) => p.authorId === profileUser.id);
-  const userJamPosts = jamPosts.filter((j) => j.authorId === profileUser.id);
   const audioSrc = profileUser.profileSongData ?? profileUser.profileSongUrl;
+
+  // Bands for own profile
+  const adminBands = isOwnProfile && currentUser
+    ? bands.filter((b) => b.adminId === currentUser.id)
+    : [];
+  const memberBands = isOwnProfile && currentUser
+    ? bands.filter(
+        (b) =>
+          b.members.some((m) => m.userId === currentUser.id && m.status === 'accepted') &&
+          b.adminId !== currentUser.id
+      )
+    : [];
 
   function startEditing() {
     setEditInstagram(profileUser!.instagram ?? '');
@@ -145,27 +175,36 @@ export function ProfilePage() {
     setEditing(false);
   }
 
-  function handleAddProfileComment(content: string) {
+  function saveJamEntry() {
     if (!currentUser) return;
-    const comment: Comment = {
-      id: crypto.randomUUID(),
-      authorId: currentUser.id,
-      content,
-      createdAt: new Date().toISOString(),
+    updateUserById(currentUser.id, {
+      jamEntry: { visible: jamVisible, description: jamDesc, customization: jamCustomization },
+    });
+    setJamSaved(true);
+    setTimeout(() => setJamSaved(false), 2000);
+  }
+
+  function handleInvite(e: React.FormEvent, bandId: string) {
+    e.preventDefault();
+    setInviteError('');
+    const target = getUserByUsername(inviteUsername.trim());
+    if (!target) { setInviteError('User not found.'); return; }
+    if (target.id === currentUser?.id) { setInviteError('You are already the admin.'); return; }
+    inviteUserToBand(bandId, target.id);
+    setInviteUsername('');
+  }
+
+  function makeAddComment(postId: string) {
+    return (content: string) => {
+      if (!currentUser) return;
+      const comment: Comment = {
+        id: crypto.randomUUID(),
+        authorId: currentUser.id,
+        content,
+        createdAt: new Date().toISOString(),
+      };
+      addCommentToFeedPost(postId, comment);
     };
-    // Update profile user's comments
-    // We need access to updateUser for the profile user — only possible for own profile
-    // For viewing others' profiles, comments go to the viewed user's profileComments
-    // Since we only have updateUser for currentUser, we update the viewed user via Auth context
-    // The AuthContext updateUser only updates the current user, so for profile comments on others'
-    // profiles, we'd need a separate function. For now, only allow comments if viewing own profile
-    // or if the auth context is extended. We'll store on currentUser's profile if own, else skip.
-    // HACK: using updateUser means it only saves on own profile. Cross-user comments need backend.
-    if (isOwnProfile && profileUser) {
-      updateUser({
-        profileComments: [...profileUser.profileComments, comment],
-      });
-    }
   }
 
   return (
@@ -375,33 +414,131 @@ export function ProfilePage() {
           </div>
         )}
 
+        {/* Jam Entry — own profile only */}
+        {isOwnProfile && (
+          <div className="profile-page__section panel">
+            <div className="profile-page__section-header">
+              <div className="section-label">Jam Entry</div>
+              <label className="profile-page__toggle-label">
+                <input
+                  type="checkbox"
+                  checked={jamVisible}
+                  onChange={(e) => setJamVisible(e.target.checked)}
+                  style={{ width: 'auto' }}
+                />
+                Visible on Jams page
+              </label>
+            </div>
+            <div className="form-group">
+              <label>Description</label>
+              <textarea
+                value={jamDesc}
+                onChange={(e) => setJamDesc(e.target.value)}
+                rows={3}
+                placeholder="Describe what you're looking for, your vibe, availability..."
+              />
+            </div>
+            <CustomizationPanel value={jamCustomization} onChange={setJamCustomization} />
+            <div className="form-actions">
+              <button type="button" className="btn" onClick={saveJamEntry}>
+                {jamSaved ? 'Saved!' : 'Save Jam Entry'}
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Your Bands — own profile only */}
+        {isOwnProfile && (adminBands.length > 0 || memberBands.length > 0) && (
+          <div className="profile-page__section">
+            <div className="section-label" style={{ marginBottom: 'var(--sp-md)' }}>Your Bands</div>
+
+            {adminBands.map((band) => (
+              <div key={band.id} className="profile-page__band-block">
+                <BandRow band={band} />
+                <div className="profile-page__band-manage">
+                  <button
+                    className="btn btn--secondary btn--sm"
+                    onClick={() => setExpandedBandId(expandedBandId === band.id ? null : band.id)}
+                  >
+                    {expandedBandId === band.id ? 'Hide Management' : 'Manage Members'}
+                  </button>
+                </div>
+
+                {expandedBandId === band.id && (
+                  <div className="profile-page__band-members panel">
+                    <div className="section-label" style={{ marginBottom: 'var(--sp-sm)' }}>Members</div>
+                    {band.members.map((m) => {
+                      const member = getUserById(m.userId);
+                      return (
+                        <div key={m.userId} className="profile-page__member-row">
+                          <span className="profile-page__member-name">{member?.username ?? 'unknown'}</span>
+                          <span className={`tag tag--${m.status}`}>{m.status}</span>
+                          {m.status === 'pending' && (
+                            <button
+                              className="btn btn--secondary btn--sm"
+                              onClick={() => declineBandInvite(band.id, m.userId)}
+                            >
+                              Revoke
+                            </button>
+                          )}
+                        </div>
+                      );
+                    })}
+
+                    <form onSubmit={(e) => handleInvite(e, band.id)} className="profile-page__invite-form">
+                      <div className="section-label" style={{ marginTop: 'var(--sp-md)', marginBottom: 'var(--sp-sm)' }}>
+                        Invite Member
+                      </div>
+                      <div className="profile-page__invite-row">
+                        <input
+                          type="text"
+                          placeholder="Enter username..."
+                          value={inviteUsername}
+                          onChange={(e) => setInviteUsername(e.target.value)}
+                        />
+                        <button type="submit" className="btn btn--sm">Invite</button>
+                      </div>
+                      {inviteError && <p className="form-error">{inviteError}</p>}
+                    </form>
+                  </div>
+                )}
+              </div>
+            ))}
+
+            {memberBands.map((band) => {
+              const invite = band.members.find((m) => m.userId === currentUser?.id);
+              return (
+                <div key={band.id} className="profile-page__band-block">
+                  <BandRow band={band} />
+                  {invite?.status === 'pending' && (
+                    <div className="profile-page__band-manage">
+                      <button className="btn btn--sm" onClick={() => acceptBandInvite(band.id, currentUser!.id)}>
+                        Accept Invite
+                      </button>
+                      <button className="btn btn--secondary btn--sm" onClick={() => declineBandInvite(band.id, currentUser!.id)}>
+                        Decline
+                      </button>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        )}
+
         {/* User's posts */}
         {userFeedPosts.length > 0 && (
           <div className="profile-page__posts">
             <div className="section-label">Posts</div>
             {userFeedPosts.map((p) => (
-              <FeedPostCard key={p.id} post={p} />
+              <FeedPostCard
+                key={p.id}
+                post={p}
+                onDelete={isOwnProfile ? () => deleteFeedPost(p.id) : undefined}
+                onAddComment={makeAddComment(p.id)}
+              />
             ))}
           </div>
-        )}
-
-        {userJamPosts.length > 0 && (
-          <div className="profile-page__posts">
-            <div className="section-label">Jams</div>
-            <div className="jams-grid">
-              {userJamPosts.map((j) => (
-                <JamCard key={j.id} jam={j} />
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Profile comments (own profile only for now) */}
-        {isOwnProfile && (
-          <CommentSection
-            comments={profileUser.profileComments}
-            onAddComment={handleAddProfileComment}
-          />
         )}
       </div>
     </div>

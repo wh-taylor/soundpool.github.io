@@ -1,36 +1,38 @@
-import { useState } from 'react';
-import { useApp } from '../context/AppContext';
+import { Link } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 import { JamCard } from '../components/JamCard';
-import { CreateJamModal } from '../components/CreateJamModal';
 import './JamsPage.css';
 
 export function JamsPage() {
-  const { jamPosts } = useApp();
-  const [modalOpen, setModalOpen] = useState(false);
+  const { users, currentUser } = useAuth();
+  const visibleUsers = users.filter((u) => u.jamEntry?.visible);
+  const currentUserVisible = currentUser?.jamEntry?.visible;
 
   return (
     <div className="page">
-      <div className="jams-page__header">
-        <h1 className="page-heading">Jams</h1>
-        <button className="btn" onClick={() => setModalOpen(true)}>
-          + Post Jam
-        </button>
-      </div>
+      <h1 className="page-heading">Jams</h1>
       <p className="jams-page__sub">
-        Find musicians to jam with, or let people know you're available.
+        Musicians available to connect — enable yours from your profile.
       </p>
 
-      {jamPosts.length === 0 ? (
-        <div className="empty-state">No jams posted yet. Be the first!</div>
-      ) : (
-        <div className="jams-page__grid">
-          {jamPosts.map((jam) => (
-            <JamCard key={jam.id} jam={jam} />
-          ))}
+      {!currentUserVisible && currentUser && (
+        <div className="jams-page__banner">
+          Your jam entry is hidden.{' '}
+          <Link to={`/profile/${currentUser.username}`} className="jams-page__banner-link">
+            Enable it on your profile →
+          </Link>
         </div>
       )}
 
-      {modalOpen && <CreateJamModal onClose={() => setModalOpen(false)} />}
+      {visibleUsers.length === 0 ? (
+        <div className="empty-state">No jam entries yet. Enable yours from your profile!</div>
+      ) : (
+        <div className="jams-page__grid">
+          {visibleUsers.map((u) => (
+            <JamCard key={u.id} user={u} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

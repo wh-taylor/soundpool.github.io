@@ -8,7 +8,6 @@ export type UserRole =
 
 export type AgeRestriction = '21+' | '18+' | 'All Ages';
 export type MemberStatus = 'pending' | 'accepted';
-export type FeedItemType = 'post' | 'jam' | 'band' | 'show';
 
 export interface Customization {
   fontFamily?: string;
@@ -22,6 +21,12 @@ export interface Comment {
   authorId: string;
   content: string;
   createdAt: string;
+}
+
+export interface JamEntry {
+  visible: boolean;
+  description: string;
+  customization?: Customization;
 }
 
 export interface User {
@@ -43,7 +48,7 @@ export interface User {
   joinDate: string;
   lastActive: string;
   customization: Customization;
-  profileComments: Comment[];
+  jamEntry?: JamEntry;
 }
 
 export interface FeedPost {
@@ -52,18 +57,7 @@ export interface FeedPost {
   content: string;
   videoUrl?: string;
   imageUrl?: string;
-  createdAt: string;
-}
-
-export interface JamPost {
-  id: string;
-  authorId: string;
-  description: string;
-  instruments: string[];
-  genres: string[];
-  imageUrl?: string;
-  videoUrl?: string;
-  customization?: Customization;
+  comments: Comment[];
   createdAt: string;
 }
 
@@ -126,16 +120,15 @@ export interface ArtistPost {
   authorId: string;
   artistName: string;
   city: string;
-  genres: string[];
+  mediums: string[];
   description: string;
   imageUrl?: string;
   instagram?: string;
-  spotify?: string;
+  website?: string;
   createdAt: string;
 }
 
 export type UnifiedFeedItem =
   | { type: 'post'; createdAt: string; data: FeedPost }
-  | { type: 'jam'; createdAt: string; data: JamPost }
   | { type: 'band'; createdAt: string; data: Band }
   | { type: 'show'; createdAt: string; data: Show };

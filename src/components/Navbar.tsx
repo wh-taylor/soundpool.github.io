@@ -82,7 +82,7 @@ export function Navbar() {
                     className="navbar__dropdown-item"
                     onClick={() => setDropdownOpen(false)}
                   >
-                    Artists
+                    Visual Artists
                   </Link>
                 </div>
               )}

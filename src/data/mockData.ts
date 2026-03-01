@@ -1,7 +1,6 @@
 import type {
   User,
   FeedPost,
-  JamPost,
   Band,
   Show,
   VenuePost,
@@ -25,7 +24,11 @@ export const MOCK_USERS: User[] = [
     joinDate: '2025-01-15T00:00:00.000Z',
     lastActive: new Date().toISOString(),
     customization: { accentColor: '#ff6b35' },
-    profileComments: [],
+    jamEntry: {
+      visible: true,
+      description: 'looking for a bassist and second guitarist for experimental/noise rock jams. no genre police, bring weird sounds.',
+      customization: { accentColor: '#ff6b35' },
+    },
   },
   {
     id: 'user-2',
@@ -41,7 +44,11 @@ export const MOCK_USERS: User[] = [
     joinDate: '2025-02-20T00:00:00.000Z',
     lastActive: new Date().toISOString(),
     customization: { accentColor: '#00d4ff' },
-    profileComments: [],
+    jamEntry: {
+      visible: true,
+      description: 'drummer available for session work and live gigs. experienced in jazz, funk, and indie. dm for rates.',
+      customization: { accentColor: '#00d4ff' },
+    },
   },
   {
     id: 'user-3',
@@ -57,7 +64,6 @@ export const MOCK_USERS: User[] = [
     joinDate: '2025-03-01T00:00:00.000Z',
     lastActive: new Date().toISOString(),
     customization: { accentColor: '#c8ff00' },
-    profileComments: [],
   },
 ];
 
@@ -66,41 +72,22 @@ export const MOCK_FEED_POSTS: FeedPost[] = [
     id: 'post-1',
     authorId: 'user-1',
     content: 'just finished tracking the new record. 11 songs, recorded entirely in a shed. posting teasers all week.',
+    comments: [],
     createdAt: new Date(Date.now() - 2 * 60 * 60 * 1000).toISOString(),
   },
   {
     id: 'post-2',
     authorId: 'user-3',
     content: 'PSA: the Mohawk has shows every weekend through October. support your local venues — they keep the scene alive.',
+    comments: [],
     createdAt: new Date(Date.now() - 5 * 60 * 60 * 1000).toISOString(),
   },
   {
     id: 'post-3',
     authorId: 'user-2',
     content: 'new photography set from last night\'s show at Exit/In. low light, high energy. drop a comment if you want prints.',
-    videoUrl: '',
+    comments: [],
     createdAt: new Date(Date.now() - 12 * 60 * 60 * 1000).toISOString(),
-  },
-];
-
-export const MOCK_JAM_POSTS: JamPost[] = [
-  {
-    id: 'jam-1',
-    authorId: 'user-1',
-    description: 'looking for a bassist and second guitarist for experimental/noise rock jams. no genre police, bring weird sounds.',
-    instruments: ['Electric Guitar', 'Synthesizer'],
-    genres: ['Experimental', 'Noise', 'Post-Rock'],
-    customization: { accentColor: '#ff6b35' },
-    createdAt: new Date(Date.now() - 3 * 60 * 60 * 1000).toISOString(),
-  },
-  {
-    id: 'jam-2',
-    authorId: 'user-2',
-    description: 'drummer available for session work and live gigs. experienced in jazz, funk, and indie. dm for rates.',
-    instruments: ['Drums / Percussion', 'Keys / Piano'],
-    genres: ['Jazz', 'Funk', 'Indie'],
-    customization: { accentColor: '#00d4ff' },
-    createdAt: new Date(Date.now() - 8 * 60 * 60 * 1000).toISOString(),
   },
 ];
 
@@ -176,10 +163,10 @@ export const MOCK_ARTIST_POSTS: ArtistPost[] = [
   {
     id: 'artist-1',
     authorId: 'user-1',
-    artistName: 'Axiom Rez',
+    artistName: 'Vessel Dye',
     city: 'Austin, TX',
-    genres: ['Experimental', 'Noise'],
-    description: 'solo project exploring the intersection of noise, hip-hop, and broken electronics.',
+    mediums: ['Illustration', 'Digital Art', 'Collage'],
+    description: 'album artwork, gig posters, and merch design. influenced by underground zine culture and sci-fi paperback covers.',
     instagram: 'axiom_rez',
     createdAt: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString(),
   },

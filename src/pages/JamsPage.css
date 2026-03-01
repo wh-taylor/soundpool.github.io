@@ -17,3 +17,18 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: var(--sp-md);
 }
+
+.jams-page__banner {
+  background: var(--bg-panel);
+  border: 1px solid var(--accent-1);
+  padding: var(--sp-sm) var(--sp-md);
+  margin-bottom: var(--sp-md);
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.jams-page__banner-link {
+  color: var(--accent-1);
+  text-decoration: none;
+}
+.jams-page__banner-link:hover { color: var(--text-bright); }
