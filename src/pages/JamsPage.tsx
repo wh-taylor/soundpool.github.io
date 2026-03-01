@@ -2,11 +2,16 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { JamCard } from '../components/JamCard';
 import './JamsPage.css';
+import { getArtistSimilarities, getGenreSimilarities, getSimilarity } from '../utils/similarity';
 
 export function JamsPage() {
   const { users, currentUser } = useAuth();
-  const visibleUsers = users.filter((u) => u.jamEntry?.visible);
+  const genreSimilarity = getGenreSimilarities(users);
+  const artistSimilarity = getArtistSimilarities(users);
+  const visibleUsers = users.filter((u) => u.jamEntry?.visible)
+    .sort((u1, u2) => getSimilarity(currentUser!, u2, genreSimilarity, artistSimilarity) - getSimilarity(currentUser!, u1, genreSimilarity, artistSimilarity));
   const currentUserVisible = currentUser?.jamEntry?.visible;
+  console.log(visibleUsers.map((u) => getSimilarity(currentUser!, u, genreSimilarity, artistSimilarity)));
 
   return (
     <div className="page">
