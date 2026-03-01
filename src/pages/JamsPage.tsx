@@ -106,7 +106,7 @@ export function JamsPage() {
       ) : (
         <div className="jams-page__grid">
           {filtered.map((u) => (
-            <JamCard key={u.id} user={u} />
+            <JamCard key={u.id} user={u} compatibility={getSimilarity(currentUser!, u, genreSimilarity, artistSimilarity, allArtists)} />
           ))}
         </div>
       )}

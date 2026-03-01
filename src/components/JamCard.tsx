@@ -6,6 +6,7 @@ import './JamCard.css';
 
 interface JamCardProps {
   user: User;
+  compatibility: number;
 }
 
 function getYouTubeId(url: string): string | null {
@@ -13,7 +14,7 @@ function getYouTubeId(url: string): string | null {
   return match ? match[1] : null;
 }
 
-export function JamCard({ user }: JamCardProps) {
+export function JamCard({ user, compatibility }: JamCardProps) {
   const accentColor = user.jamEntry?.customization?.accentColor ?? 'var(--accent-1)';
   const fontFamily = user.jamEntry?.customization?.fontFamily;
   const fontStack = FONT_OPTIONS.find((f) => f.value === fontFamily)?.stack ?? 'inherit';
@@ -74,6 +75,7 @@ export function JamCard({ user }: JamCardProps) {
           <span key={g} className="tag tag--genre">{g}</span>
         ))}
       </div>
+      <span key={compatibility} className="compatibility">{(100 * compatibility).toFixed(1)}% MATCH</span>
     </article>
   );
 }
