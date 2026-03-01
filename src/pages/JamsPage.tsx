@@ -24,7 +24,7 @@ export function JamsPage() {
   const allArtists = useMemo(() => [...new Set(users.flatMap(u => u.favoriteArtists))], [users]);
 
   const filtered = useMemo(() => {
-    let list = users.filter((u) => u.jamEntry?.visible);
+    let list = users.filter((u) => u.jamEntry?.visible && u != currentUser!);
     if (locationFilter) list = list.filter((u) => u.location === locationFilter);
     if (genreFilters.length > 0) {
       list = list.filter((u) =>
