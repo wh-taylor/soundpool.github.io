@@ -49,7 +49,7 @@ export function JamsPage() {
         <h1 className="page-heading">Jams</h1>
       </div>
       <p className="jams-page__sub">
-        Musicians available to connect — enable yours from your profile.
+        Musicians available to connect
       </p>
 
       {!currentUserVisible && currentUser && (
