@@ -60,6 +60,14 @@
   text-transform: uppercase;
 }
 
+.band-row__name-link {
+  text-decoration: none;
+}
+
+.band-row__name-link:hover {
+  text-decoration: underline;
+}
+
 .band-row__meta {
   display: flex;
   align-items: center;

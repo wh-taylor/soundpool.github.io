@@ -17,7 +17,7 @@ export const MOCK_USERS: User[] = [
     "roles": [
       "Musician"
     ],
-    "location": "Portland, OR",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Iron & Wine",
       "Townes Van Zandt"
@@ -38,6 +38,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "static_sound",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=w6No1I3_Ypc",
       "description": "Influenced heavily by metal. Looking for a drums / percussion player who gets it.",
       "customization": {
         "accentColor": "#f4a261"
@@ -52,7 +53,7 @@ export const MOCK_USERS: User[] = [
     "roles": [
       "Musician"
     ],
-    "location": "New Orleans, LA",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Slint",
       "Battles",
@@ -83,7 +84,7 @@ export const MOCK_USERS: User[] = [
     "roles": [
       "Booker"
     ],
-    "location": "Columbus, OH",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Neutral Milk Hotel",
       "Guided By Voices",
@@ -107,7 +108,7 @@ export const MOCK_USERS: User[] = [
     "roles": [
       "Musician"
     ],
-    "location": "Austin, TX",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "J. Cole",
       "Run The Jewels"
@@ -129,6 +130,7 @@ export const MOCK_USERS: User[] = [
     "spotify": "https://open.spotify.com/artist/mock12",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Looking for a flute to complete our r&b / soul project.",
       "customization": {
         "accentColor": "#ae2012"
@@ -143,7 +145,7 @@ export const MOCK_USERS: User[] = [
     "roles": [
       "Musician"
     ],
-    "location": "Portland, OR",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Gojira",
       "Pallbearer",
@@ -166,6 +168,7 @@ export const MOCK_USERS: User[] = [
     "spotify": "https://open.spotify.com/artist/mock13",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Producer with thrash metal beats looking for a live keys / piano player.",
       "customization": {
         "accentColor": "#00b4d8"
@@ -180,7 +183,7 @@ export const MOCK_USERS: User[] = [
     "roles": [
       "Musician"
     ],
-    "location": "Dallas, TX",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "MF DOOM",
       "billy woods",
@@ -203,6 +206,7 @@ export const MOCK_USERS: User[] = [
     },
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Gigging bass guitar player looking to join a trap outfit.",
       "customization": {
         "accentColor": "#ca6702"
@@ -218,7 +222,7 @@ export const MOCK_USERS: User[] = [
       "Musician",
       "Sound Engineer"
     ],
-    "location": "Boston, MA",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "HAIM",
       "Lorde",
@@ -249,7 +253,7 @@ export const MOCK_USERS: User[] = [
       "Musician",
       "Artist"
     ],
-    "location": "Boston, MA",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Kendrick Lamar",
       "J. Cole",
@@ -272,6 +276,7 @@ export const MOCK_USERS: User[] = [
     "spotify": "https://open.spotify.com/artist/mock16",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=zKlDDMzXoos",
       "description": "Been writing hip-hop / rap tunes for years. Finally looking for a band. Play lap steel?",
       "customization": {
         "accentColor": "#00bbf9"
@@ -286,7 +291,7 @@ export const MOCK_USERS: User[] = [
     "roles": [
       "Fan"
     ],
-    "location": "Portland, OR",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Wayne Shorter",
       "Kamasi Washington",
@@ -312,7 +317,7 @@ export const MOCK_USERS: User[] = [
       "Musician",
       "Artist"
     ],
-    "location": "Austin, TX",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "LCD Soundsystem",
       "Kraftwerk"
@@ -335,6 +340,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "dark_buzz",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Starting a drum & bass band. Need a pedal steel player who knows their stuff.",
       "customization": {
         "accentColor": "#264653"
@@ -349,7 +355,7 @@ export const MOCK_USERS: User[] = [
     "roles": [
       "Fan"
     ],
-    "location": "Nashville, TN",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "SBTRKT",
       "Boards of Canada",
@@ -376,7 +382,7 @@ export const MOCK_USERS: User[] = [
     "roles": [
       "Sound Engineer"
     ],
-    "location": "Memphis, TN",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Obituary",
       "Baroness",
@@ -397,6 +403,7 @@ export const MOCK_USERS: User[] = [
     },
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Have a home studio. Want to record some noise with a electric guitar.",
       "customization": {
         "accentColor": "#ff6b6b"
@@ -411,7 +418,7 @@ export const MOCK_USERS: User[] = [
     "roles": [
       "Musician"
     ],
-    "location": "Boston, MA",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Wild Nothing",
       "Men I Trust",
@@ -433,6 +440,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "neonloop",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=9kn7E-OauJI",
       "description": "Starting a indie rock band. Need a acoustic guitar player who knows their stuff.",
       "customization": {
         "accentColor": "#457b9d"
@@ -448,7 +456,7 @@ export const MOCK_USERS: User[] = [
       "Musician",
       "Sound Engineer"
     ],
-    "location": "Cleveland, OH",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Ennio Morricone",
       "Max Richter",
@@ -471,6 +479,7 @@ export const MOCK_USERS: User[] = [
     "spotify": "https://open.spotify.com/artist/mock22",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Looking for a vocals to complete our post-rock project.",
       "customization": {
         "accentColor": "#fee440"
@@ -485,7 +494,7 @@ export const MOCK_USERS: User[] = [
     "roles": [
       "Sound Engineer"
     ],
-    "location": "Dallas, TX",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Danny Brown",
       "JPEGmafia"
@@ -505,6 +514,7 @@ export const MOCK_USERS: User[] = [
     },
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Have a home studio. Want to record some trap with a acoustic guitar.",
       "customization": {
         "accentColor": "#f4a261"
@@ -519,7 +529,7 @@ export const MOCK_USERS: User[] = [
     "roles": [
       "Fan"
     ],
-    "location": "St. Louis, MO",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Four Tet",
       "Bicep"
@@ -546,7 +556,7 @@ export const MOCK_USERS: User[] = [
       "Booker",
       "Fan"
     ],
-    "location": "New York, NY",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Philip Glass",
       "Olafur Arnalds",
@@ -574,7 +584,7 @@ export const MOCK_USERS: User[] = [
     "roles": [
       "Musician"
     ],
-    "location": "Austin, TX",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Nils Frahm",
       "Philip Glass"
@@ -603,7 +613,7 @@ export const MOCK_USERS: User[] = [
       "Musician",
       "Artist"
     ],
-    "location": "Denver, CO",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Earl Sweatshirt",
       "J. Cole",
@@ -626,6 +636,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "guitardog63",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Looking for a saxophone to complete our trap project.",
       "customization": {
         "accentColor": "#4cc9f0"
@@ -640,7 +651,7 @@ export const MOCK_USERS: User[] = [
     "roles": [
       "Sound Engineer"
     ],
-    "location": "Houston, TX",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Max Richter",
       "Ryuichi Sakamoto",
@@ -661,6 +672,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "amper71",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Starting a ambient band. Need a electric guitar player who knows their stuff.",
       "customization": {
         "accentColor": "#9b2226"
@@ -675,7 +687,7 @@ export const MOCK_USERS: User[] = [
     "roles": [
       "Musician"
     ],
-    "location": "Portland, OR",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Metallica",
       "Neurosis",
@@ -697,6 +709,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "the_echo_keys",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Producer with thrash metal beats looking for a live vocals player.",
       "customization": {
         "accentColor": "#2a9d8f"
@@ -712,7 +725,7 @@ export const MOCK_USERS: User[] = [
       "Booker",
       "Fan"
     ],
-    "location": "Indianapolis, IN",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Obituary",
       "Napalm Death"
@@ -736,7 +749,7 @@ export const MOCK_USERS: User[] = [
     "roles": [
       "Musician"
     ],
-    "location": "Baltimore, MD",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "The Stooges",
       "Bad Brains",
@@ -748,9 +761,7 @@ export const MOCK_USERS: User[] = [
       "Metal"
     ],
     "instruments": [
-      "Viola",
-      "Flute",
-      "Clarinet"
+      "Electric Guitar"
     ],
     "joinDate": "2025-06-26T13:56:58.172Z",
     "lastActive": "2026-03-01T12:18:56.771Z",
@@ -760,7 +771,8 @@ export const MOCK_USERS: User[] = [
     "instagram": "the_dark_tone",
     "jamEntry": {
       "visible": true,
-      "description": "Covering all the punk classics plus originals. Need a clarinet.",
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "description": "Covering all the punk classics. Need drums.",
       "customization": {
         "accentColor": "#4361ee"
       }
@@ -774,7 +786,7 @@ export const MOCK_USERS: User[] = [
     "roles": [
       "Booker"
     ],
-    "location": "New Orleans, LA",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Toots and the Maytals",
       "Fela Kuti",
@@ -803,7 +815,7 @@ export const MOCK_USERS: User[] = [
       "Musician",
       "Photographer/Videographer"
     ],
-    "location": "San Francisco, CA",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Max Richter",
       "Arvo Part",
@@ -826,6 +838,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "electric_loop",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Covering all the sludge classics plus originals. Need a bass guitar.",
       "customization": {
         "accentColor": "#9b2226"
@@ -840,7 +853,7 @@ export const MOCK_USERS: User[] = [
     "roles": [
       "Musician"
     ],
-    "location": "Atlanta, GA",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Slowdive",
       "The Radio Dept.",
@@ -864,6 +877,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "vintagefuzz",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Been writing shoegaze tunes for years. Finally looking for a band. Play vocals?",
       "customization": {
         "accentColor": "#4361ee"
@@ -879,7 +893,7 @@ export const MOCK_USERS: User[] = [
       "Musician",
       "Artist"
     ],
-    "location": "Charlotte, NC",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Dead Kennedys",
       "Bad Brains",
@@ -898,6 +912,7 @@ export const MOCK_USERS: User[] = [
     },
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=5o5b9fT_1Wg",
       "description": "Influenced heavily by post-hardcore. Looking for a vocals player who gets it.",
       "customization": {
         "accentColor": "#ffd166"
@@ -913,19 +928,20 @@ export const MOCK_USERS: User[] = [
       "Musician",
       "Photographer/Videographer"
     ],
-    "location": "Seattle, WA",
+    "location": "Newark, DE",
     "favoriteArtists": [
-      "Wolves in the Throne Room",
-      "Sleep",
-      "Mastodon",
-      "Electric Wizard"
+      "Nirvana",
+      "Mudhoney",
+      "The Melvins",
+      "Bad Brains"
     ],
     "favoriteGenres": [
-      "Stoner Rock",
-      "Metal"
+      "Punk",
+      "Grunge"
     ],
     "instruments": [
-      "Acoustic Guitar"
+      "Electric Guitar",
+      "Vocals"
     ],
     "joinDate": "2024-06-22T12:23:46.063Z",
     "lastActive": "2026-03-01T12:18:56.771Z",
@@ -936,7 +952,8 @@ export const MOCK_USERS: User[] = [
     "spotify": "https://open.spotify.com/artist/mock36",
     "jamEntry": {
       "visible": true,
-      "description": "Starting a metal band. Need a acoustic guitar player who knows their stuff.",
+      "youtubeUrl": "https://www.youtube.com/watch?v=4D3lcWpUD34",
+      "description": "Trying to start a punk/grunge band in Newark. I play guitar and sing. Need a drummer, bassist, and a second guitarist if you are out there. Influences: Nirvana, Mudhoney, Bad Brains. No experience needed, just commitment.",
       "customization": {
         "accentColor": "#ffd166"
       }
@@ -951,7 +968,7 @@ export const MOCK_USERS: User[] = [
       "Musician",
       "Photographer/Videographer"
     ],
-    "location": "Seattle, WA",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Snarky Puppy",
       "Mavis Staples",
@@ -974,6 +991,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "pluckhead74",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Influenced heavily by gospel. Looking for a flute player who gets it.",
       "customization": {
         "accentColor": "#e63946"
@@ -988,7 +1006,7 @@ export const MOCK_USERS: User[] = [
     "roles": [
       "Sound Engineer"
     ],
-    "location": "Columbus, OH",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Explosions in the Sky",
       "Hella",
@@ -1019,7 +1037,7 @@ export const MOCK_USERS: User[] = [
     "roles": [
       "Musician"
     ],
-    "location": "Denver, CO",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Toots and the Maytals",
       "The Skatalites",
@@ -1048,7 +1066,7 @@ export const MOCK_USERS: User[] = [
     "roles": [
       "Booker"
     ],
-    "location": "Los Angeles, CA",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Tera Melos",
       "Explosions in the Sky"
@@ -1073,7 +1091,7 @@ export const MOCK_USERS: User[] = [
       "Musician",
       "Sound Engineer"
     ],
-    "location": "Columbus, OH",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Herbie Hancock",
       "John Coltrane",
@@ -1094,6 +1112,7 @@ export const MOCK_USERS: User[] = [
     },
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Been writing r&b / soul tunes for years. Finally looking for a band. Play bass guitar?",
       "customization": {
         "accentColor": "#7209b7"
@@ -1108,7 +1127,7 @@ export const MOCK_USERS: User[] = [
     "roles": [
       "Booker"
     ],
-    "location": "Houston, TX",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Toots and the Maytals",
       "Tinariwen",
@@ -1135,7 +1154,7 @@ export const MOCK_USERS: User[] = [
     "roles": [
       "Musician"
     ],
-    "location": "New York, NY",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Bill Evans",
       "Kamasi Washington",
@@ -1156,6 +1175,7 @@ export const MOCK_USERS: User[] = [
     },
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Working on an EP. Need a vocals for some r&b / soul tracks.",
       "customization": {
         "accentColor": "#7209b7"
@@ -1170,7 +1190,7 @@ export const MOCK_USERS: User[] = [
     "roles": [
       "Fan"
     ],
-    "location": "Columbus, OH",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Arvo Part",
       "Olafur Arnalds",
@@ -1197,7 +1217,7 @@ export const MOCK_USERS: User[] = [
       "Musician",
       "Photographer/Videographer"
     ],
-    "location": "Minneapolis, MN",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Superchunk",
       "Dinosaur Jr.",
@@ -1220,6 +1240,7 @@ export const MOCK_USERS: User[] = [
     },
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Forming a indie group. You play lap steel?",
       "customization": {
         "accentColor": "#7209b7"
@@ -1235,7 +1256,7 @@ export const MOCK_USERS: User[] = [
       "Musician",
       "Artist"
     ],
-    "location": "New Orleans, LA",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Jay-Z",
       "Kendrick Lamar",
@@ -1262,7 +1283,7 @@ export const MOCK_USERS: User[] = [
     "roles": [
       "Fan"
     ],
-    "location": "Nashville, TN",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "This Will Destroy You",
       "Swans",
@@ -1288,7 +1309,7 @@ export const MOCK_USERS: User[] = [
     "roles": [
       "Musician"
     ],
-    "location": "Boston, MA",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Electric Wizard",
       "Neurosis",
@@ -1321,7 +1342,7 @@ export const MOCK_USERS: User[] = [
       "Musician",
       "Artist"
     ],
-    "location": "Portland, OR",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Angel Olsen",
       "Lorde"
@@ -1345,6 +1366,7 @@ export const MOCK_USERS: User[] = [
     "spotify": "https://open.spotify.com/artist/mock49",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Producer with indie pop beats looking for a live mandolin player.",
       "customization": {
         "accentColor": "#2a9d8f"
@@ -1360,7 +1382,7 @@ export const MOCK_USERS: User[] = [
       "Booker",
       "Fan"
     ],
-    "location": "Chicago, IL",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Don Caballero",
       "Slint",
@@ -1387,7 +1409,7 @@ export const MOCK_USERS: User[] = [
       "Musician",
       "Sound Engineer"
     ],
-    "location": "Denver, CO",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Lucinda Williams",
       "Iron & Wine",
@@ -1441,6 +1463,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "soundwolf27",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Gigging violin player looking to join a thrash metal outfit.",
       "customization": {
         "accentColor": "#f4a261"
@@ -1455,7 +1478,7 @@ export const MOCK_USERS: User[] = [
     "roles": [
       "Booker"
     ],
-    "location": "Atlanta, GA",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "The Radio Dept.",
       "Beach House",
@@ -1482,7 +1505,7 @@ export const MOCK_USERS: User[] = [
       "Booker",
       "Fan"
     ],
-    "location": "New Orleans, LA",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Gillian Welch",
       "Lucinda Williams"
@@ -1508,7 +1531,7 @@ export const MOCK_USERS: User[] = [
     "roles": [
       "Sound Engineer"
     ],
-    "location": "Cleveland, OH",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Nas",
       "billy woods",
@@ -1537,7 +1560,7 @@ export const MOCK_USERS: User[] = [
     "roles": [
       "Booker"
     ],
-    "location": "Baltimore, MD",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Tortoise",
       "Tera Melos"
@@ -1561,7 +1584,7 @@ export const MOCK_USERS: User[] = [
       "Musician",
       "Artist"
     ],
-    "location": "Washington, DC",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Curtis Mayfield",
       "Miles Davis"
@@ -1583,6 +1606,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "the_neon_haze",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Producer with gospel beats looking for a live lap steel player.",
       "customization": {
         "accentColor": "#118ab2"
@@ -1597,7 +1621,7 @@ export const MOCK_USERS: User[] = [
     "roles": [
       "Musician"
     ],
-    "location": "Washington, DC",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "John Prine",
       "Gillian Welch",
@@ -1620,6 +1644,7 @@ export const MOCK_USERS: User[] = [
     "spotify": "https://open.spotify.com/artist/mock58",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Starting a folk band. Need a organ player who knows their stuff.",
       "customization": {
         "accentColor": "#6a0572"
@@ -1635,7 +1660,7 @@ export const MOCK_USERS: User[] = [
       "Musician",
       "Artist"
     ],
-    "location": "St. Louis, MO",
+    "location": "Newark, DE",
     "favoriteArtists": [
       "Turnstile",
       "Title Fight",
@@ -1687,6 +1712,7 @@ export const MOCK_USERS: User[] = [
     "spotify": "https://open.spotify.com/artist/mock60",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Gigging vocals player looking to join a progressive rock outfit.",
       "customization": {
         "accentColor": "#2a9d8f"
@@ -1720,6 +1746,7 @@ export const MOCK_USERS: User[] = [
     },
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Lost my old band, starting fresh. trap project, need a cello.",
       "customization": {
         "accentColor": "#f15bb5"
@@ -1813,6 +1840,7 @@ export const MOCK_USERS: User[] = [
     "spotify": "https://open.spotify.com/artist/mock64",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Influenced heavily by folk. Looking for a banjo player who gets it.",
       "customization": {
         "accentColor": "#80b918"
@@ -1964,6 +1992,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "coldpick",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Casual reggae jams every weekend. Looking for a clarinet.",
       "customization": {
         "accentColor": "#9b2226"
@@ -2001,6 +2030,7 @@ export const MOCK_USERS: User[] = [
     "spotify": "https://open.spotify.com/artist/mock70",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Lost my old band, starting fresh. cumbia project, need a lap steel.",
       "customization": {
         "accentColor": "#ffd166"
@@ -2036,6 +2066,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "wildring",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Starting a funk band. Need a drums / percussion player who knows their stuff.",
       "customization": {
         "accentColor": "#ffd166"
@@ -2071,6 +2102,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "the_echo_guitar",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Starting a blues band. Need a bass guitar player who knows their stuff.",
       "customization": {
         "accentColor": "#560bad"
@@ -2192,6 +2224,7 @@ export const MOCK_USERS: User[] = [
     "spotify": "https://open.spotify.com/artist/mock76",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "No egos, just vibes. folk jams, need a pedal steel.",
       "customization": {
         "accentColor": "#ca6702"
@@ -2286,6 +2319,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "the_echo_synth",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Covering all the reggae classics plus originals. Need a bass guitar.",
       "customization": {
         "accentColor": "#ae2012"
@@ -2348,6 +2382,7 @@ export const MOCK_USERS: User[] = [
     },
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Writing originals in the blues vein. Need a electric guitar and vocals.",
       "customization": {
         "accentColor": "#264653"
@@ -2439,6 +2474,7 @@ export const MOCK_USERS: User[] = [
     },
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Gigging synthesizer player looking to join a singer-songwriter outfit.",
       "customization": {
         "accentColor": "#4cc9f0"
@@ -2527,6 +2563,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "hornfox37",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Influenced heavily by classical. Looking for a dj / turntables player who gets it.",
       "customization": {
         "accentColor": "#9b5de5"
@@ -2588,6 +2625,7 @@ export const MOCK_USERS: User[] = [
     },
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Been writing indie tunes for years. Finally looking for a band. Play organ?",
       "customization": {
         "accentColor": "#ae2012"
@@ -2625,6 +2663,7 @@ export const MOCK_USERS: User[] = [
     },
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Lost my old band, starting fresh. rock project, need a fiddle.",
       "customization": {
         "accentColor": "#80b918"
@@ -2661,6 +2700,7 @@ export const MOCK_USERS: User[] = [
     "spotify": "https://open.spotify.com/artist/mock91",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Writing originals in the classical vein. Need a vocals and vocals.",
       "customization": {
         "accentColor": "#e9c46a"
@@ -2695,6 +2735,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "fuzzy_hum",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Forming a hip-hop / rap group. You play electric guitar?",
       "customization": {
         "accentColor": "#9b2226"
@@ -2730,6 +2771,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "warm_drum",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "No egos, just vibes. dream pop jams, need a acoustic guitar.",
       "customization": {
         "accentColor": "#f4a261"
@@ -2878,6 +2920,7 @@ export const MOCK_USERS: User[] = [
     "spotify": "https://open.spotify.com/artist/mock98",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Forming a indie pop group. You play electric guitar?",
       "customization": {
         "accentColor": "#e9c46a"
@@ -2944,6 +2987,7 @@ export const MOCK_USERS: User[] = [
     },
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Starting a folk band. Need a bass guitar player who knows their stuff.",
       "customization": {
         "accentColor": "#ffd166"
@@ -3150,6 +3194,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "the_hollow_bass",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Starting a reggae band. Need a vocals player who knows their stuff.",
       "customization": {
         "accentColor": "#ee9b00"
@@ -3215,6 +3260,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "the_velvet_jam",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Gigging vocals player looking to join a emo outfit.",
       "customization": {
         "accentColor": "#4361ee"
@@ -3250,6 +3296,7 @@ export const MOCK_USERS: User[] = [
     },
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Forming a lo-fi group. You play vocals?",
       "customization": {
         "accentColor": "#4cc9f0"
@@ -3287,6 +3334,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "velvetcab",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "No egos, just vibes. reggaeton jams, need a keys / piano.",
       "customization": {
         "accentColor": "#ee9b00"
@@ -3323,6 +3371,7 @@ export const MOCK_USERS: User[] = [
     "spotify": "https://open.spotify.com/artist/mock112",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Writing originals in the blues vein. Need a bass guitar and vocals.",
       "customization": {
         "accentColor": "#ff6b6b"
@@ -3358,6 +3407,7 @@ export const MOCK_USERS: User[] = [
     },
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Covering all the folk classics plus originals. Need a bass guitar.",
       "customization": {
         "accentColor": "#00f5d4"
@@ -3449,6 +3499,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "rawhowl",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "harmonica player seeking collaborators for synth-pop recordings.",
       "customization": {
         "accentColor": "#ff6b6b"
@@ -3539,6 +3590,7 @@ export const MOCK_USERS: User[] = [
     },
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Starting a dream pop band. Need a acoustic guitar player who knows their stuff.",
       "customization": {
         "accentColor": "#f15bb5"
@@ -3627,6 +3679,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "dark_chord",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Influenced heavily by shoegaze. Looking for a saxophone player who gets it.",
       "customization": {
         "accentColor": "#ff6b6b"
@@ -3662,6 +3715,7 @@ export const MOCK_USERS: User[] = [
     },
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Working on an EP. Need a electric guitar for some hip-hop / rap tracks.",
       "customization": {
         "accentColor": "#7209b7"
@@ -3700,6 +3754,7 @@ export const MOCK_USERS: User[] = [
     "spotify": "https://open.spotify.com/artist/mock124",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "synthesizer player seeking collaborators for drum & bass recordings.",
       "customization": {
         "accentColor": "#ffd166"
@@ -3762,6 +3817,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "shadow_pick",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Have a home studio. Want to record some world music with a acoustic guitar.",
       "customization": {
         "accentColor": "#4895ef"
@@ -3796,6 +3852,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "darkpick",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Have a home studio. Want to record some gospel with a organ.",
       "customization": {
         "accentColor": "#9b5de5"
@@ -3868,6 +3925,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "the_hollow_amp",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Starting a trap band. Need a banjo player who knows their stuff.",
       "customization": {
         "accentColor": "#4361ee"
@@ -3962,6 +4020,7 @@ export const MOCK_USERS: User[] = [
     },
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Writing originals in the progressive rock vein. Need a double bass and vocals.",
       "customization": {
         "accentColor": "#ff6b6b"
@@ -4026,6 +4085,7 @@ export const MOCK_USERS: User[] = [
     },
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Influenced heavily by jazz. Looking for a vocals player who gets it.",
       "customization": {
         "accentColor": "#9b2226"
@@ -4063,6 +4123,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "quiet_fuzz",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Been writing blues tunes for years. Finally looking for a band. Play vocals?",
       "customization": {
         "accentColor": "#4361ee"
@@ -4101,6 +4162,7 @@ export const MOCK_USERS: User[] = [
     "spotify": "https://open.spotify.com/artist/mock136",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "vocals player seeking collaborators for punk recordings.",
       "customization": {
         "accentColor": "#80b918"
@@ -4137,6 +4199,7 @@ export const MOCK_USERS: User[] = [
     "spotify": "https://open.spotify.com/artist/mock137",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Influenced heavily by shoegaze. Looking for a vocals player who gets it.",
       "customization": {
         "accentColor": "#f15bb5"
@@ -4169,6 +4232,7 @@ export const MOCK_USERS: User[] = [
     },
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Working on an EP. Need a acoustic guitar for some reggae tracks.",
       "customization": {
         "accentColor": "#e63946"
@@ -4260,6 +4324,7 @@ export const MOCK_USERS: User[] = [
     "spotify": "https://open.spotify.com/artist/mock141",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Gigging drums / percussion player looking to join a post-hardcore outfit.",
       "customization": {
         "accentColor": "#06d6a0"
@@ -4329,6 +4394,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "coldriff",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "bass guitar player seeking collaborators for rock recordings.",
       "customization": {
         "accentColor": "#118ab2"
@@ -4449,6 +4515,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "echojam",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Forming a ambient group. You play lap steel?",
       "customization": {
         "accentColor": "#ee9b00"
@@ -4485,6 +4552,7 @@ export const MOCK_USERS: User[] = [
     },
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Forming a post-punk group. You play lap steel?",
       "customization": {
         "accentColor": "#ff6b6b"
@@ -4548,6 +4616,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "velvetjam",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Been writing disco tunes for years. Finally looking for a band. Play bass guitar?",
       "customization": {
         "accentColor": "#e63946"
@@ -4585,6 +4654,7 @@ export const MOCK_USERS: User[] = [
     },
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "banjo player seeking collaborators for disco recordings.",
       "customization": {
         "accentColor": "#4cc9f0"
@@ -4653,6 +4723,7 @@ export const MOCK_USERS: User[] = [
     "spotify": "https://open.spotify.com/artist/mock153",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Working on an EP. Need a mandolin for some r&b / soul tracks.",
       "customization": {
         "accentColor": "#457b9d"
@@ -4720,6 +4791,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "the_velvet_brass",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Looking for a vocals to complete our death metal project.",
       "customization": {
         "accentColor": "#4895ef"
@@ -4754,6 +4826,7 @@ export const MOCK_USERS: User[] = [
     },
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Covering all the indie rock classics plus originals. Need a bass guitar.",
       "customization": {
         "accentColor": "#264653"
@@ -4819,6 +4892,7 @@ export const MOCK_USERS: User[] = [
     "spotify": "https://open.spotify.com/artist/mock158",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Working on an EP. Need a banjo for some post-punk tracks.",
       "customization": {
         "accentColor": "#9b2226"
@@ -4856,6 +4930,7 @@ export const MOCK_USERS: User[] = [
     "spotify": "https://open.spotify.com/artist/mock159",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Writing originals in the classical vein. Need a lap steel and vocals.",
       "customization": {
         "accentColor": "#7209b7"
@@ -4894,6 +4969,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "jamkid61",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Producer with trap beats looking for a live electric guitar player.",
       "customization": {
         "accentColor": "#e9c46a"
@@ -4958,6 +5034,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "sonic_pick",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "No egos, just vibes. ambient jams, need a bass guitar.",
       "customization": {
         "accentColor": "#4895ef"
@@ -4996,6 +5073,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "bowman19",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Have a home studio. Want to record some experimental with a dj / turntables.",
       "customization": {
         "accentColor": "#00b4d8"
@@ -5031,6 +5109,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "brokentone",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Producer with shoegaze beats looking for a live electric guitar player.",
       "customization": {
         "accentColor": "#3f37c9"
@@ -5094,6 +5173,7 @@ export const MOCK_USERS: User[] = [
     },
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Writing originals in the trap vein. Need a electric guitar and vocals.",
       "customization": {
         "accentColor": "#fee440"
@@ -5160,6 +5240,7 @@ export const MOCK_USERS: User[] = [
     "spotify": "https://open.spotify.com/artist/mock168",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Working on an EP. Need a vocals for some world music tracks.",
       "customization": {
         "accentColor": "#e63946"
@@ -5197,6 +5278,7 @@ export const MOCK_USERS: User[] = [
     "spotify": "https://open.spotify.com/artist/mock169",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Lost my old band, starting fresh. reggae project, need a organ.",
       "customization": {
         "accentColor": "#80b918"
@@ -5263,6 +5345,7 @@ export const MOCK_USERS: User[] = [
     "spotify": "https://open.spotify.com/artist/mock171",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Casual experimental jams every weekend. Looking for a dobro.",
       "customization": {
         "accentColor": "#00b4d8"
@@ -5299,6 +5382,7 @@ export const MOCK_USERS: User[] = [
     },
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Writing originals in the indie rock vein. Need a bass guitar and vocals.",
       "customization": {
         "accentColor": "#f4a261"
@@ -5368,6 +5452,7 @@ export const MOCK_USERS: User[] = [
     "spotify": "https://open.spotify.com/artist/mock174",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Producer with ambient beats looking for a live trumpet player.",
       "customization": {
         "accentColor": "#560bad"
@@ -5406,6 +5491,7 @@ export const MOCK_USERS: User[] = [
     "spotify": "https://open.spotify.com/artist/mock175",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Forming a death metal group. You play electric guitar?",
       "customization": {
         "accentColor": "#7209b7"
@@ -5552,6 +5638,7 @@ export const MOCK_USERS: User[] = [
     "spotify": "https://open.spotify.com/artist/mock180",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Starting a disco band. Need a cello player who knows their stuff.",
       "customization": {
         "accentColor": "#e9c46a"
@@ -5589,6 +5676,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "the_neon_tape",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Producer with post-punk beats looking for a live keys / piano player.",
       "customization": {
         "accentColor": "#4895ef"
@@ -5708,6 +5796,7 @@ export const MOCK_USERS: User[] = [
     "spotify": "https://open.spotify.com/artist/mock185",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Influenced heavily by house. Looking for a electric guitar player who gets it.",
       "customization": {
         "accentColor": "#06d6a0"
@@ -5851,6 +5940,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "fuzzist68",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Lost my old band, starting fresh. experimental project, need a trumpet.",
       "customization": {
         "accentColor": "#560bad"
@@ -5914,6 +6004,7 @@ export const MOCK_USERS: User[] = [
     },
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Looking for a trumpet to complete our trap project.",
       "customization": {
         "accentColor": "#00bbf9"
@@ -5981,6 +6072,7 @@ export const MOCK_USERS: User[] = [
     "spotify": "https://open.spotify.com/artist/mock194",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Forming a reggaeton group. You play banjo?",
       "customization": {
         "accentColor": "#06d6a0"
@@ -6072,6 +6164,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "jamwolf50",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Have a home studio. Want to record some pop with a bass guitar.",
       "customization": {
         "accentColor": "#4361ee"
@@ -6108,6 +6201,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "the_vapor_bow",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Gigging clarinet player looking to join a jazz outfit.",
       "customization": {
         "accentColor": "#560bad"
@@ -6146,6 +6240,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "wild_riff",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Forming a heavy metal group. You play bass guitar?",
       "customization": {
         "accentColor": "#e9c46a"
@@ -6212,6 +6307,7 @@ export const MOCK_USERS: User[] = [
     "spotify": "https://open.spotify.com/artist/mock201",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Influenced heavily by blues. Looking for a vocals player who gets it.",
       "customization": {
         "accentColor": "#e9c46a"
@@ -6302,6 +6398,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "vapor_chord",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Have a home studio. Want to record some indie pop with a bass guitar.",
       "customization": {
         "accentColor": "#ae2012"
@@ -6337,6 +6434,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "ampfox52",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Producer with alternative beats looking for a live pedal steel player.",
       "customization": {
         "accentColor": "#ca6702"
@@ -6373,6 +6471,7 @@ export const MOCK_USERS: User[] = [
     "instagram": "the_cold_tape",
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Writing originals in the funk vein. Need a dj / turntables and vocals.",
       "customization": {
         "accentColor": "#7209b7"
@@ -6407,6 +6506,7 @@ export const MOCK_USERS: User[] = [
     },
     "jamEntry": {
       "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "description": "Influenced heavily by shoegaze. Looking for a drums / percussion player who gets it.",
       "customization": {
         "accentColor": "#f15bb5"
@@ -6437,17 +6537,256 @@ export const MOCK_USERS: User[] = [
     "customization": {
       "accentColor": "#ee9b00"
     }
+  },
+  {
+    "id": "user-209",
+    "username": "creek_noise",
+    "email": "creek_noise@soundpool.io",
+    "password": "demo1234",
+    "roles": [
+      "Musician",
+      "Sound Engineer"
+    ],
+    "location": "Newark, DE",
+    "favoriteArtists": [
+      "Swans",
+      "Body/Head",
+      "My Bloody Valentine"
+    ],
+    "favoriteGenres": [
+      "Noise",
+      "Shoegaze",
+      "Experimental"
+    ],
+    "instruments": [
+      "Electric Guitar",
+      "Synthesizer"
+    ],
+    "joinDate": "2025-06-12T14:22:00.000Z",
+    "lastActive": "2026-03-01T12:18:56.776Z",
+    "customization": {
+      "accentColor": "#b44dff"
+    },
+    "instagram": "creek_noise"
+  },
+  {
+    "id": "user-210",
+    "username": "mainst_mag",
+    "email": "mainst_mag@soundpool.io",
+    "password": "demo1234",
+    "roles": [
+      "Musician",
+      "Fan"
+    ],
+    "location": "Newark, DE",
+    "favoriteArtists": [
+      "Fugazi",
+      "Jawbreaker",
+      "Hot Snakes"
+    ],
+    "favoriteGenres": [
+      "Punk",
+      "Post-Punk",
+      "Indie Rock"
+    ],
+    "instruments": [
+      "Bass Guitar",
+      "Vocals"
+    ],
+    "joinDate": "2025-03-08T09:45:00.000Z",
+    "lastActive": "2026-03-01T12:18:56.776Z",
+    "customization": {
+      "accentColor": "#ff6b35"
+    },
+    "instagram": "mainst_mag"
+  },
+  {
+    "id": "user-211",
+    "username": "ud_folkvibe",
+    "email": "ud_folkvibe@soundpool.io",
+    "password": "demo1234",
+    "roles": [
+      "Musician"
+    ],
+    "location": "Newark, DE",
+    "favoriteArtists": [
+      "Big Thief",
+      "Adrianne Lenker",
+      "Gillian Welch"
+    ],
+    "favoriteGenres": [
+      "Folk",
+      "Singer-Songwriter",
+      "Indie"
+    ],
+    "instruments": [
+      "Acoustic Guitar",
+      "Vocals",
+      "Banjo"
+    ],
+    "joinDate": "2025-09-01T18:30:00.000Z",
+    "lastActive": "2026-03-01T12:18:56.776Z",
+    "customization": {
+      "accentColor": "#c8ff00"
+    },
+    "instagram": "ud_folkvibe",
+    "jamEntry": {
+      "visible": true,
+      "youtubeUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "description": "Singer-songwriter looking for another acoustic voice or fiddle. Writing originals.",
+      "customization": {
+        "accentColor": "#c8ff00"
+      }
+    }
+  },
+  {
+    "id": "user-212",
+    "username": "ironhill_rex",
+    "email": "ironhill_rex@soundpool.io",
+    "password": "demo1234",
+    "roles": [
+      "Musician",
+      "Booker"
+    ],
+    "location": "Newark, DE",
+    "favoriteArtists": [
+      "Sleep",
+      "Electric Wizard",
+      "Eyehategod"
+    ],
+    "favoriteGenres": [
+      "Sludge",
+      "Stoner Rock",
+      "Metal"
+    ],
+    "instruments": [
+      "Electric Guitar",
+      "Drums / Percussion"
+    ],
+    "joinDate": "2024-07-19T21:00:00.000Z",
+    "lastActive": "2026-03-01T12:18:56.776Z",
+    "customization": {
+      "accentColor": "#00d4ff"
+    },
+    "instagram": "ironhill_rex"
   }
 ];
 
 export const MOCK_FEED_POSTS: FeedPost[] = [
+  {
+    "id": "post-54",
+    "authorId": "user-209",
+    "content": "Ran a feedback loop through my reverb chain for three hours last night. Still processing what I made.",
+    "createdAt": "2026-03-01T13:05:00.000Z",
+    "comments": [
+      {
+        "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+        "authorId": "user-163",
+        "content": "Need to hear this immediately.",
+        "createdAt": "2026-03-01T13:22:00.000Z"
+      },
+      {
+        "id": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+        "authorId": "user-192",
+        "content": "Noise heads rise up.",
+        "createdAt": "2026-03-01T13:45:00.000Z"
+      }
+    ],
+    "location": "Newark, DE"
+  },
+  {
+    "id": "post-55",
+    "authorId": "user-210",
+    "content": "House show at the Depot St spot this weekend. Bands TBA but trust me. All ages, bring your own chair.",
+    "createdAt": "2026-03-01T12:50:00.000Z",
+    "comments": [
+      {
+        "id": "c3d4e5f6-a7b8-9012-cdef-123456789012",
+        "authorId": "user-212",
+        "content": "In. Already blocked it off.",
+        "createdAt": "2026-03-01T13:01:00.000Z"
+      },
+      {
+        "id": "d4e5f6a7-b8c9-0123-defa-234567890123",
+        "authorId": "user-113",
+        "content": "Will my band fit in the lineup? DM me.",
+        "createdAt": "2026-03-01T13:10:00.000Z"
+      }
+    ],
+    "location": "Newark, DE"
+  },
+  {
+    "id": "post-56",
+    "authorId": "user-211",
+    "content": "Recorded a voice memo on the green behind the library. Birds, wind, and a bad chord. It was perfect.",
+    "createdAt": "2026-03-01T11:00:00.000Z",
+    "comments": [],
+    "location": "Newark, DE"
+  },
+  {
+    "id": "post-57",
+    "authorId": "user-212",
+    "content": "Iron Hill Sludge is playing a set at The Woods on Friday. If you have never seen us live come find out what you've been missing.",
+    "createdAt": "2026-03-01T10:15:00.000Z",
+    "comments": [
+      {
+        "id": "e5f6a7b8-c9d0-1234-efab-345678901234",
+        "authorId": "user-155",
+        "content": "Front row. I will be there.",
+        "createdAt": "2026-03-01T10:33:00.000Z"
+      }
+    ],
+    "location": "Newark, DE"
+  },
+  {
+    "id": "post-58",
+    "authorId": "user-52",
+    "content": "Anyone need a violinist for their project? Folk, metal, experimental — I do not care. Just give me a weird chart.",
+    "createdAt": "2026-03-01T09:45:00.000Z",
+    "comments": [
+      {
+        "id": "f6a7b8c9-d0e1-2345-fabc-456789012345",
+        "authorId": "user-209",
+        "content": "Noise project could use this. Sliding into your DMs.",
+        "createdAt": "2026-03-01T10:02:00.000Z"
+      },
+      {
+        "id": "a7b8c9d0-e1f2-3456-abcd-567890123456",
+        "authorId": "user-211",
+        "content": "Would love to collab on something acoustic too.",
+        "createdAt": "2026-03-01T10:18:00.000Z"
+      }
+    ],
+    "location": "Newark, DE"
+  },
+  {
+    "id": "post-59",
+    "authorId": "user-163",
+    "content": "Took photos at the Tire Shop show last night. Lighting was brutal and I am obsessed with how they came out.",
+    "createdAt": "2026-03-01T08:30:00.000Z",
+    "comments": [
+      {
+        "id": "b8c9d0e1-f2a3-4567-bcde-678901234567",
+        "authorId": "user-108",
+        "content": "Post them!! We need to see.",
+        "createdAt": "2026-03-01T08:48:00.000Z"
+      },
+      {
+        "id": "c9d0e1f2-a3b4-5678-cdef-789012345678",
+        "authorId": "user-210",
+        "content": "That venue has the best energy for photos. Low light nightmare but worth it every time.",
+        "createdAt": "2026-03-01T09:05:00.000Z"
+      }
+    ],
+    "location": "Newark, DE"
+  },
   {
     "id": "post-46",
     "authorId": "user-49",
     "content": "Wrote the bridge I have been stuck on for three weeks at 6am this morning. Brain works on its own schedule.",
     "createdAt": "2026-03-01T11:31:13.386Z",
     "comments": [],
-    "location": "Portland, OR"
+    "location": "Newark, DE"
   },
   {
     "id": "post-28",
@@ -6480,7 +6819,7 @@ export const MOCK_FEED_POSTS: FeedPost[] = [
         "createdAt": "2026-03-01T12:33:13.386Z"
       }
     ],
-    "location": "Washington, DC"
+    "location": "Newark, DE"
   },
   {
     "id": "post-19",
@@ -6544,15 +6883,15 @@ export const MOCK_FEED_POSTS: FeedPost[] = [
         "createdAt": "2026-03-01T09:47:13.386Z"
       }
     ],
-    "location": "San Francisco, CA"
+    "location": "Newark, DE"
   },
   {
     "id": "post-18",
     "authorId": "user-18",
-    "content": "Anyone in Austin, TX doing house stuff? Trying to find my people.",
+    "content": "Anyone in Newark, DE doing house stuff? Trying to find my people.",
     "createdAt": "2026-03-01T04:31:13.386Z",
     "comments": [],
-    "location": "Austin, TX"
+    "location": "Newark, DE"
   },
   {
     "id": "post-29",
@@ -6596,7 +6935,7 @@ export const MOCK_FEED_POSTS: FeedPost[] = [
         "createdAt": "2026-03-01T04:35:13.386Z"
       }
     ],
-    "location": "Kansas City, MO"
+    "location": "Newark, DE"
   },
   {
     "id": "post-22",
@@ -6707,7 +7046,7 @@ export const MOCK_FEED_POSTS: FeedPost[] = [
   {
     "id": "post-16",
     "authorId": "user-120",
-    "content": "Anyone in Detroit, MI doing country stuff? Trying to find my people.",
+    "content": "Anyone in Newark, DE doing country stuff? Trying to find my people.",
     "createdAt": "2026-02-28T13:31:13.386Z",
     "comments": [],
     "location": "Detroit, MI"
@@ -6747,7 +7086,7 @@ export const MOCK_FEED_POSTS: FeedPost[] = [
         "createdAt": "2026-02-28T13:13:13.386Z"
       }
     ],
-    "location": "Philadelphia, PA"
+    "location": "Newark, DE"
   },
   {
     "id": "post-41",
@@ -6784,7 +7123,7 @@ export const MOCK_FEED_POSTS: FeedPost[] = [
     "content": "Looking for a second guitarist who is into Disco. DMs open.",
     "createdAt": "2026-02-27T12:31:13.386Z",
     "comments": [],
-    "location": "Denver, CO"
+    "location": "Newark, DE"
   },
   {
     "id": "post-40",
@@ -6807,7 +7146,7 @@ export const MOCK_FEED_POSTS: FeedPost[] = [
         "createdAt": "2026-02-27T13:33:13.386Z"
       }
     ],
-    "location": "Chicago, IL"
+    "location": "Newark, DE"
   },
   {
     "id": "post-49",
@@ -6895,7 +7234,7 @@ export const MOCK_FEED_POSTS: FeedPost[] = [
   {
     "id": "post-37",
     "authorId": "user-40",
-    "content": "Anyone in Los Angeles, CA doing post-rock stuff? Trying to find my people.",
+    "content": "Anyone in Newark, DE doing post-rock stuff? Trying to find my people.",
     "createdAt": "2026-02-26T12:31:13.386Z",
     "comments": [
       {
@@ -7046,7 +7385,7 @@ export const MOCK_FEED_POSTS: FeedPost[] = [
         "createdAt": "2026-02-22T13:31:13.386Z"
       }
     ],
-    "location": "New Orleans, LA"
+    "location": "Newark, DE"
   },
   {
     "id": "post-5",
@@ -7054,7 +7393,7 @@ export const MOCK_FEED_POSTS: FeedPost[] = [
     "content": "Nothing beats a packed basement show. Trap is alive and well.",
     "createdAt": "2026-02-22T12:31:13.385Z",
     "comments": [],
-    "location": "Austin, TX"
+    "location": "Newark, DE"
   },
   {
     "id": "post-17",
@@ -7151,7 +7490,7 @@ export const MOCK_FEED_POSTS: FeedPost[] = [
         "createdAt": "2026-02-20T14:15:13.386Z"
       }
     ],
-    "location": "Minneapolis, MN"
+    "location": "Newark, DE"
   },
   {
     "id": "post-52",
@@ -7166,7 +7505,7 @@ export const MOCK_FEED_POSTS: FeedPost[] = [
         "createdAt": "2026-02-20T13:31:13.386Z"
       }
     ],
-    "location": "Washington, DC"
+    "location": "Newark, DE"
   },
   {
     "id": "post-26",
@@ -7193,7 +7532,7 @@ export const MOCK_FEED_POSTS: FeedPost[] = [
         "createdAt": "2026-02-18T13:39:13.386Z"
       }
     ],
-    "location": "Cleveland, OH"
+    "location": "Newark, DE"
   },
   {
     "id": "post-47",
@@ -7280,7 +7619,7 @@ export const MOCK_FEED_POSTS: FeedPost[] = [
         "createdAt": "2026-02-16T14:19:13.386Z"
       }
     ],
-    "location": "San Francisco, CA"
+    "location": "Newark, DE"
   },
   {
     "id": "post-10",
@@ -7288,16 +7627,16 @@ export const MOCK_FEED_POSTS: FeedPost[] = [
     "content": "Finished mixing a demo I have been sitting on for months. Might actually release this one.",
     "createdAt": "2026-02-16T12:31:13.385Z",
     "comments": [],
-    "location": "Columbus, OH"
+    "location": "Newark, DE"
   }
 ];
 
 export const MOCK_BANDS: Band[] = [
   {
     id: 'band-1',
-    name: 'The White Clay Creekers',
+    name: 'Attack! Attack!',
     location: 'Newark, DE',
-    genres: ['Indie Folk', 'Americana'],
+    genres: ['Post-Hardcore', 'Emo'],
     description: 'A collection of Newark locals playing songs about the creek and the valley.',
     imageUrl: 'https://lh3.googleusercontent.com/g2GYRdzdl1j6L1B2AquVhOw7W5SSJFWIIwspdZUdMMNWXRfJ1Vrm_77YH2Bh_oeqQuR0dThzWfy5Xw=w544-h544-p-l90-rj',
     gifUrl: 'https://media1.tenor.com/m/27lt1OraEGwAAAAd/metal-crabcore.gif',
@@ -7305,12 +7644,13 @@ export const MOCK_BANDS: Band[] = [
     members: [{ userId: 'user-7', status: 'accepted' }],
     customization: { accentColor: '#27ae60' },
     createdAt: new Date().toISOString(),
+    instagram: 'attackattackband',
   },
   {
     id: 'band-2',
     name: 'Weezer',
     location: 'Newark, DE',
-    genres: ['Punk', 'Garage Rock'],
+    genres: ['Punk', 'Alternative'],
     description: 'Loud, fast, and local. Catch us at the next house show.',
     imageUrl: 'https://m.media-amazon.com/images/I/61uiv0AYlvL._UF1000,1000_QL80_.jpg',
     gifUrl: 'https://media1.tenor.com/m/-Wy_5x1LpDsAAAAC/weezer-undone-the-sweater-song.gif',
@@ -7318,12 +7658,13 @@ export const MOCK_BANDS: Band[] = [
     members: [{ userId: 'user-8', status: 'accepted' }],
     customization: { accentColor: '#e74c3c' },
     createdAt: new Date().toISOString(),
+    instagram: 'weezer',
   },
   {
     id: 'band-3',
     name: 'Nirvana',
     location: 'Newark, DE',
-    genres: ['College Rock', 'Alternative'],
+    genres: ['Alternative', 'Grunge'],
     description: 'Born in the dorms of UD, now playing venues across the tristate area.',
     imageUrl: 'https://townsquare.media/site/366/files/2014/11/Nirvana.jpg',
     gifUrl: 'https://media1.tenor.com/m/CDkx4D2SZAkAAAAd/nirvana-kurt-cobain.gif',
@@ -7331,25 +7672,27 @@ export const MOCK_BANDS: Band[] = [
     members: [{ userId: 'user-1', status: 'accepted' }],
     customization: { accentColor: '#2980b9' },
     createdAt: new Date().toISOString(),
+    instagram: 'nirvana',
   },
   {
     id: 'band-4',
     name: 'Kublai Khan TX',
     location: 'Newark, DE',
-    genres: ['Synth-Pop', 'Electronic'],
-    description: 'Melodic synthesizers and drum machines from the heart of Delaware.',
+    genres: ['Metal', 'Post-Hardcore'],
+    description: 'Heavy riffs and breakdowns from the heart of Delaware.',
     imageUrl: 'https://yt3.googleusercontent.com/bkOtWaixO16DVxGfcRQSIdYtp2lkCVN3tA_-sxYhbPY_0or72jK4Fdlg4aGFmpzaDn9TGtRTCGE=s900-c-k-c0x00ffffff-no-rj',
     gifUrl: 'https://media1.tenor.com/m/WG9Cx9bgkZgAAAAC/kublai-khan-tx.gif',
     adminId: 'user-4',
     members: [{ userId: 'user-4', status: 'accepted' }],
     customization: { accentColor: '#1abc9c' },
     createdAt: new Date().toISOString(),
+    instagram: 'kublaikhan_tx',
   },
   {
     id: 'band-5',
     name: 'Iron Hill Sludge',
     location: 'Newark, DE',
-    genres: ['Metal', 'Doom'],
+    genres: ['Sludge', 'Metal'],
     description: 'Heavy riffs inspired by the dark woods of Iron Hill Park.',
     imageUrl: '',
     gifUrl: '',
@@ -7362,7 +7705,7 @@ export const MOCK_BANDS: Band[] = [
     id: 'band-6',
     name: 'The Blue Hen Quartet',
     location: 'Newark, DE',
-    genres: ['Jazz', 'Swing'],
+    genres: ['Jazz'],
     description: 'Sophisticated jazz for your upscale events and late-night lounges.',
     imageUrl: '',
     gifUrl: '',

@@ -52,7 +52,19 @@ export function BandRow({ band }: BandRowProps) {
         <div className="band-row__info">
           <div className="band-row__name-row">
             <h3 className="band-row__name" style={{ color: accentColor }}>
-              {band.name}
+              {band.instagram ? (
+                <a
+                  href={`https://instagram.com/${band.instagram}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="band-row__name-link"
+                  style={{ color: accentColor }}
+                >
+                  {band.name}
+                </a>
+              ) : (
+                band.name
+              )}
             </h3>
             <span className="tag tag--band">Band</span>
           </div>

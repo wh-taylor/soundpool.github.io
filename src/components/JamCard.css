@@ -1,7 +1,6 @@
 .jam-card {
   padding: var(--sp-md);
   transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: var(--sp-sm);

@@ -83,6 +83,7 @@ export interface Band {
   audioData?: string; // base64 audio, max 2MB
   customization?: Customization;
   createdAt: string;
+  instagram?: string;
 }
 
 export interface Show {
