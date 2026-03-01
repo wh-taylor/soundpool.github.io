@@ -1,5 +1,14 @@
 .feed-post-card {
   padding: var(--sp-md);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: default; /* or pointer if the whole card is a link */
+}
+
+/* Add this new block */
+.feed-post-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  z-index: 2; /* Keeps the scaled card above others */
 }
 
 .feed-post-card__header {

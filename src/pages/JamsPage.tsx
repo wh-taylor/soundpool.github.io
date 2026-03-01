@@ -9,8 +9,31 @@ import { getArtistSimilarities, getGenreSimilarities, getSimilarity } from '../u
 
 export function JamsPage() {
   const { users, currentUser } = useAuth();
-  const visibleUsers = users.filter((u) => u.jamEntry?.visible);
+  const genreSimilarity = getGenreSimilarities(users);
+  const artistSimilarity = getArtistSimilarities(users);
+  const visibleUsers = users.filter((u) => u.jamEntry?.visible)
+    .sort((u1, u2) => getSimilarity(currentUser!, u2, genreSimilarity, artistSimilarity) - getSimilarity(currentUser!, u1, genreSimilarity, artistSimilarity));
   const currentUserVisible = currentUser?.jamEntry?.visible;
+  const [locationFilter, setLocationFilter] = useState(currentUser?.location ?? '');
+  const [genreFilters, setGenreFilters] = useState<string[]>([]);
+
+  function toggleGenre(g: string) {
+    setGenreFilters((prev) =>
+      prev.includes(g) ? prev.filter((x) => x !== g) : [...prev, g]
+    );
+  }
+
+  const filtered = useMemo(() => {
+    let list = users.filter((u) => u.jamEntry?.visible);
+    if (locationFilter) list = list.filter((u) => u.location === locationFilter);
+    if (genreFilters.length > 0) {
+      list = list.filter((u) =>
+        genreFilters.some((g) => u.favoriteGenres.includes(g))
+      );
+    }
+    return list;
+  }, [users, locationFilter, genreFilters]);
+  console.log(visibleUsers.map((u) => getSimilarity(currentUser!, u, genreSimilarity, artistSimilarity)));
 
   return (
     <div className="page">
