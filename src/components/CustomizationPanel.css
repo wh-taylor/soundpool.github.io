@@ -1,0 +1,19 @@
+.customization-panel {
+  margin-top: var(--sp-lg);
+  padding: var(--sp-md);
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+}
+
+.customization-panel__grid {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  gap: var(--sp-md);
+  align-items: end;
+}
+
+@media (max-width: 600px) {
+  .customization-panel__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

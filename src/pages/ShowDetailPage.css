@@ -1,0 +1,102 @@
+.show-detail { max-width: 900px; }
+
+.show-detail__back { margin-bottom: var(--sp-lg); }
+
+.show-detail__back-link {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+.show-detail__back-link:hover { color: var(--accent-3); }
+
+.show-detail__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-xl);
+  margin-bottom: var(--sp-2xl);
+}
+
+@media (max-width: 640px) {
+  .show-detail__layout { grid-template-columns: 1fr; }
+}
+
+.show-detail__flyer-col {}
+
+.show-detail__flyer {
+  width: 100%;
+  display: block;
+  border: 1px solid var(--border);
+}
+
+.show-detail__flyer-placeholder {
+  width: 100%;
+  aspect-ratio: 2/3;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.show-detail__flyer-icon { font-size: 4rem; color: var(--border-hover); }
+
+.show-detail__info-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-lg);
+}
+
+.show-detail__badges { display: flex; gap: var(--sp-sm); }
+
+.show-detail__title {
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-bright);
+  line-height: 1.2;
+}
+
+.show-detail__meta-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-md);
+  border: 1px solid var(--border);
+  padding: var(--sp-md);
+  background: var(--bg-panel);
+}
+
+.show-detail__meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.show-detail__meta-label {
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.show-detail__meta-value {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--text-bright);
+  letter-spacing: 0.04em;
+}
+
+.show-detail__venue-link {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--accent-2);
+  text-decoration: none;
+}
+.show-detail__venue-link:hover { color: var(--text-bright); }
+
+.show-detail__share-btn { align-self: flex-start; }

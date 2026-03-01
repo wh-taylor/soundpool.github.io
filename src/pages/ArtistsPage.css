@@ -1,0 +1,44 @@
+.artists-page__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--sp-sm);
+}
+.artists-page__header .page-heading { margin-bottom: 0; }
+.artists-page__sub { font-size: 0.875rem; color: var(--text-muted); margin-bottom: var(--sp-xl); }
+
+.artists-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--sp-md);
+}
+
+.artist-card { padding: 0; overflow: hidden; }
+
+.artist-card__image { width: 100%; height: 180px; object-fit: cover; display: block; }
+
+.artist-card__body { padding: var(--sp-md); display: flex; flex-direction: column; gap: var(--sp-sm); }
+
+.artist-card__header { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-sm); }
+
+.artist-card__name { font-size: 1rem; letter-spacing: 0.05em; }
+
+.artist-card__meta {
+  display: flex;
+  gap: var(--sp-md);
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+}
+
+.artist-card__link { color: var(--accent-2); text-decoration: none; }
+.artist-card__link:hover { color: var(--text-bright); }
+.artist-card__link--spotify { color: var(--accent-3); }
+
+.artist-card__genres { display: flex; flex-wrap: wrap; gap: var(--sp-xs); }
+
+.artist-card__desc { font-size: 0.875rem; color: var(--text-primary); line-height: 1.5; }
